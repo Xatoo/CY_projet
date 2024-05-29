@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenu de la Section</title>
+    <style>
+    
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a2226;
+    }
+    
+    .annonce-box {
+    display: inline-block;
+    padding: 1%;
+    padding-right: 21.5%;
+    padding-left: 21.5%;
+    background-color: #1a2226;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #d2d1d1;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    }
+
+    .annonce-box::before, .annonce-box::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    transition: all 2s ease;
+    }
+
+    .annonce-box::before {
+    top: 0px;
+    left: 0px;
+    border-width: 140px 140px 0 0;
+    border-color: #2c75ff transparent transparent;
+    }
+
+    .annonce-box::after {
+    bottom: 0px;
+    right: 0px;
+    border-width: 0 0 140px 140px;
+    border-color: transparent transparent #2c75ff;
+    }
+
+    .annonce-box:hover::before {
+    border-width: 400px 400px 0 0;
+    top: 0px;
+    left: 0px;
+    }
+
+    .annonce-box:hover::after {
+    border-width: 0 0 400px 400px;
+    bottom: 0px;
+    right: 0px;
+    }
+
+    .text-with-image {
+    display: flex;
+    color: white;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="text-with-image" style="justify-content: center;">
+        <img src="../../Images/guillement.png" height="30" width="auto">
+        <p>Tu as un conseil qui t'as aidé et tu ne le vois pas ici. Partage le !</p>
+    </div>
+
+    <a href="deposit.html" class="annonce-box" target="_parent">Dépose ton conseil</a>
+
+</body>
+
+</html>

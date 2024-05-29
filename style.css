@@ -1,0 +1,593 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a2226;
+}
+
+footer {
+  background-color: #000000;
+  margin-top: auto;
+}
+
+/* -------- DEBUT MAIN -------- */
+
+main {
+  background-color: #1a2226;
+}
+
+.texte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 30px;
+  font-weight: bold;
+}
+
+.top-main {
+  background-color: white;
+  padding: 22px;
+}
+
+.categorie-link-main {
+  display: inline-block;
+  padding: 5px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 25%;
+  transition: color 0.2s;
+  font-size: 20px;
+}
+
+.categorie-link-main:hover {
+  color: #2c75ff;
+}
+
+.supp-text-main {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 5px;
+}
+
+.text-main {
+  color: #dcded9;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 5px;
+  line-height: 2;
+}
+
+/* -------- FIN MAIN -------- */
+
+section {
+  margin-top: auto;
+}
+
+.text-with-image {
+  display: flex;
+  color: white;
+}
+
+.line {
+  padding: 0.5px;
+  background-color: #d2d1d1;
+  margin-left: 25%;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+/* -------- DEBUT CARTE MATIERE -------- */
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: #1a2226;
+  padding: .2em;
+  border-radius: 6px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  position: relative;
+  overflow: hidden;
+}
+
+.marque-page {
+  position: absolute;
+  top: -3px;
+  left: 3%;
+  width: 25px;
+}
+
+.card-image {
+  background-color: white;
+  width: 292px;
+  height: 200px;
+  display: block;
+}
+
+.card-image:hover {
+  transform: scale(0.98);
+}
+
+.card-heading {
+  font-weight: 600;
+  color: white;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.card-link-matter {
+  text-decoration: none;
+  margin-right: 0.5%;
+  margin-left: 0.25%;
+}
+
+/* -------- FIN CARTE MATIERE -------- */
+
+/* -------- DEBUT CARTE CONSEILS -------- */
+
+.card-link {
+  text-decoration: none;
+  margin: 0.5%;
+  margin-bottom : 4%;
+}
+
+.carousel {
+  position: relative;
+  width: 966px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  margin: 0%;
+}
+
+.card-conseils {
+  width: 300px;
+  height: 105px;
+  background: #283135;
+  padding: .4em;
+  border-radius: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.card-conseils:hover {
+transform: scale(1.02);
+}
+
+.card-category,
+.card-etude,
+.card-title,
+.card-tease-text,
+.card-date,
+.stars {
+  color: white;
+}
+
+.card-category {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 14px;
+}
+
+.card-etude {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 14px;
+}
+
+.card-title {
+  font-weight: 600;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.card-tease-text {
+  text-align: center;
+  width: 240px;
+  margin: auto;
+  padding-top: 8px;
+  font-size: 0.9em;
+}
+
+.card-date {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  font-size: 14px;
+}
+
+.stars {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 1rem;
+}
+
+.star.filled {
+  color: #2c75ff;
+}
+
+.carousel-nav {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: #d2d1d1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav-dot.active {
+  background: #2c75ff;
+}
+
+/* -------- FIN CARTE CONSEILS -------- */
+
+/* -------- DEBUT VIGNETTE -------- */
+
+.vignettes-container {
+  width: 100%;
+  max-width: 1200px;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.vignette {
+  display: block;
+  width: 700px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.vignette:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.vignette-content {
+  background-color: #283135;
+  border: 1px solid #161b1d;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+  position: relative;
+}
+
+.vignette-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.vignette-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+}
+
+.vignette-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  position: relative;
+}
+
+.vignette-category, .vignette-etude, .vignette-title, .vignette-tease-text, .vignette-date, .vignette-name {
+  margin-bottom: 5px;
+}
+
+.vignette-category, .vignette-etude {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #cccccc;
+}
+
+.vignette-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: white;
+}
+
+.vignette-tease-text {
+  font-size: 1.1em;
+  color: #cccccc;
+}
+
+.vignette-date, .vignette-name {
+  font-size: 0.9em;
+  color: #cccccc;
+  margin-right: 10px;
+}
+
+.vignette-stars {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.vignette-star {
+  color: white;
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+.vignette-star.filled {
+  color: #2c75ff;
+}
+
+/* -------- DEBUT PAGINATION VIGNETTE -------- */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination-link {
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin: 0 4px;
+  border-radius: 5px;
+}
+
+.pagination-link:hover {
+  background-color: #3d4142;
+}
+
+.pagination-link.active {
+  background-color: #283135;
+  color: white;
+  border: 1px solid #161b1d;
+}
+
+/* -------- FIN VIGNETTE -------- */
+
+/* -------- DEBUT FEEDBACK -------- */
+
+.advice-rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advice-rating {
+  direction: rtl;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advice-rating span {
+  font-size: 2rem;
+  cursor: pointer;
+  color: lightgray;
+  transition: color 0.3s;
+}
+
+.advice-rating span:hover,
+.advice-rating span:hover ~ span {
+  color: #2c75ff;
+}
+
+/* -------- FIN FEEDBACK -------- */
+
+/* -------- DEBUT COMMENT -------- */
+
+.comment {
+  display: flex;
+  align-items: flex;
+  margin: 40px 25%;
+}
+
+.comment[data-reply-level="1"] {
+  margin: 40px 25%;
+}
+
+.comment[data-reply-level="2"] {
+  margin: 40px 25%;
+  padding-left: 80px;
+}
+
+.comment[data-reply-level="3"] {
+  margin: 40px 25%;
+  padding-left: 160px;
+}
+
+.comment[data-reply-level="4"] {
+  margin: 40px 25%;
+  padding-left: 240px;
+}
+
+.comment[data-reply-level="5"] {
+  margin: 40px 25%;
+  padding-left: 320px;
+}
+
+.comment[data-reply-level]:not([data-reply-level="0"])::before {
+  content: '';
+  margin-top: 25px;
+  margin-left: 0px;
+  margin-right: 30px;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 50px;
+  background-color: #2c75ff;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-text{
+  color: #dcded9;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 10px; 
+}
+
+.comment-date{
+  color: #6a6868;
+  padding: 10px 0px;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 10px; 
+}
+
+/* -------- DEBUT PROFILE -------- */
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.profile-name {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.profile-name:hover {
+  text-decoration: underline;
+}
+
+/* -------- FIN PROFILE -------- */
+
+/* -------- FIN COMMENT -------- */
+
+/* -------- DEBUT PAGE CONNEXION -------- */
+
+.form {
+  background-color: #fff;
+  display: block;
+  padding: 16px;
+  padding-right: 28px;
+  max-width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+}
+
+.form-title {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 16px;
+  margin-right: 20px;
+}
+
+.input-container input {
+  outline: none;
+  border: 1px solid #e5e7eb;
+  background-color: #fff;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.input-container label {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  font-size: 14px;
+  color: #6B7280;
+  pointer-events: none;
+  transition: top 0.3s ease, font-size 0.3s ease;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+  top: -12px;
+  font-size: 12px;
+}
+
+.submit {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #4F46E5;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 8px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.signup-link {
+  color: #6B7280;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.signup-link a {
+  text-decoration: underline;
+}
+
+/* -------- FIN PAGE CONNEXION -------- */

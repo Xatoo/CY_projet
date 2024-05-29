@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compte utilisateur</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Récupération de l'ID de l'URL
+            var urlParams = new URLSearchParams(window.location.search);
+            var accountId = urlParams.get('id');
+            // Mise à jour de l'iframe avec l'ID
+            var iframe = document.getElementById('account-iframe');
+            iframe.src = 'account.php?id=' + accountId;
+        });
+    </script>
+</head>
+
+<iframe src="../../../nav.php" width="100%" height="127px" frameborder="0"></iframe>
+
+<body>
+    <form class="form">
+        <h1><p class="form-title">Votre profil</p></h1>
+        <iframe id="account-iframe" src="account.php" width="100%" height="375px" frameborder="0"></iframe> 
+    </form>
+    <div class="form" style="box-shadow: none; background-color: #1a2226">
+    </div>
+</body>
+
+<footer>
+    <iframe src="footer.html" width="100%" height="100%" frameborder="0"></iframe>
+</footer>
+
+</html>
