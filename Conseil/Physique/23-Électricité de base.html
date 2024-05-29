@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conseillos Brothers - Électricité de base</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body data-conseil-id="23">
+    <main>
+        <iframe src="../../nav.php" width="100%" height="127px" frameborder="0"></iframe>
+        <br><br>
+        <span><a href="page/1.php" class="categorie-link-main" style="font-size: 22px;">Physique</a></span>
+        <span style="color: white; font-size: 22px">-</span>
+        <span><a href="23-Électricité de base.html" class="categorie-link-main" style="margin-left: 0%;font-size: 22px;">Électricité de base</a></span>
+        <br><br><br>
+        <div class="supp-text-main">Classe recommandée : 2nde</div>
+        <br>
+        <div class="supp-text-main">
+            De <a href="../../account.html?id=2" class="profile-name">Le-Grand Alexandre</a> le 29 May 2024
+        </div>
+        <br><br><br>
+        <div class="text-main">Pour bien comprendre les bases de l&#039;électricité en physique, il est important de se familiariser avec les concepts fondamentaux et leurs applications pratiques. L&#039;électricité est une forme d&#039;énergie résultant du mouvement de charges électriques, généralement des électrons.Commencez par apprendre les concepts de base comme la charge électrique, le courant électrique, la tension et la résistance.<br> La charge électrique est une propriété des particules subatomiques, et le courant électrique est le flux de charges dans un circuit. La tension est la différence de potentiel entre deux points d&#039;un circuit, et la résistance est la mesure de l&#039;opposition au passage du courant.Une bonne façon de visualiser ces concepts est d&#039;utiliser des analogies, comme comparer un circuit électrique à un système de plomberie.<br> La tension serait comparable à la pression de l&#039;eau, le courant à l&#039;écoulement de l&#039;eau, et la résistance à la taille des tuyaux.Ensuite, explorez la loi d&#039;Ohm, qui relie la tension (V), le courant (I) et la résistance (R) dans la formule V = I * R. Utilisez cette loi pour résoudre des problèmes simples.<br> Par exemple, si vous connaissez deux des trois valeurs, vous pouvez calculer la troisième.Apprenez à identifier et utiliser les composants de base des circuits électriques, comme les résistances, les condensateurs, et les interrupteurs. Montez des circuits simples à l&#039;aide d&#039;une plaque d&#039;expérimentation (breadboard) pour observer comment les composants interagissent.<br>Enfin, appliquez vos connaissances à des situations réelles. Pensez à comment l&#039;électricité est utilisée dans la vie quotidienne, comme dans les appareils électroménagers, les voitures électriques, et les systèmes d&#039;éclairage. Essayez de comprendre comment les circuits plus complexes fonctionnent en utilisant les principes que vous avez appris.<br>En résumé, pour maîtriser les bases de l&#039;électricité, il est important de comprendre les concepts fondamentaux, de visualiser les analogies, d&#039;explorer la loi d&#039;Ohm, et de pratiquer avec des circuits simples. Cette approche vous aidera à développer une solide base en physique et à mieux comprendre les applications pratiques de l&#039;électricité.</div>
+        <br><br>
+        <div class="supp-text-main" style="text-align: center;">Votre avis compte</div>
+        <div class="advice-rating-container">
+            <div class="advice-rating">
+                <span data-value="5">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="1">&#9733;</span>
+            </div>
+        </div>
+        <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
+            <img src="../../../Images/bulle.png" height="30" style="margin-top: 14px; margin-right: 4px;">
+            <h3>CONSEIL DISCUSSION</h3>
+        </div>
+        </br>
+        <div class="supp-text-main">Laisser un commentaire</div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stars = document.querySelectorAll('.advice-rating span');
+
+            stars.forEach(function(star) {
+                star.addEventListener('click', function() {
+                    var rating = this.getAttribute('data-value')
+                    var conseilId = document.body.getAttribute('data-conseil-id');
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '../../gestion-note.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            console.log(xhr.responseText);
+                        }
+                    };
+                    xhr.send('&conseilId=' + conseilId + '&rating=' + rating);
+                });
+            });
+        });
+        </script>
+    </main>
+    </body>
+    <footer>
+        <iframe src="../../section.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../../footer.html" width="100%" height="100%" frameborder="0"></iframe>
+    </footer>
+    </html>

@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conseillos Brothers - Approche expérimentale</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body data-conseil-id="10">
+    <main>
+        <iframe src="../../nav.php" width="100%" height="127px" frameborder="0"></iframe>
+        <br><br>
+        <span><a href="page/1.php" class="categorie-link-main" style="font-size: 22px;">SVT</a></span>
+        <span style="color: white; font-size: 22px">-</span>
+        <span><a href="10-Approche expérimentale.html" class="categorie-link-main" style="margin-left: 0%;font-size: 22px;">Approche expérimentale</a></span>
+        <br><br><br>
+        <div class="supp-text-main">Classe recommandée : Toutes</div>
+        <br>
+        <div class="supp-text-main">
+            De <a href="../../account.html?id=1" class="profile-name">César Jules</a> le 28 May 2024
+        </div>
+        <br><br><br>
+        <div class="text-main">L&#039;approche expérimentale est au cœur des sciences de la vie et de la Terre (SVT). Pour obtenir des résultats précis et fiables, il est essentiel de suivre une méthodologie rigoureuse lorsque vous menez des expériences.D&#039;abord, assurez-vous d&#039;être précis dans la collecte des données.<br> Utilisez des instruments de mesure appropriés et calibrés correctement. Prenez des mesures multiples pour réduire les erreurs aléatoires et assurez-vous de noter toutes les observations pertinentes pendant l&#039;expérience.Ensuite, analysez vos données de manière critique.<br> Utilisez des outils statistiques pour évaluer la fiabilité de vos résultats et déterminer s&#039;ils sont significatifs du point de vue scientifique. Recherchez des tendances ou des modèles dans vos données et interprétez-les à la lumière de vos hypothèses initiales.Soyez conscient des limites de votre étude et des facteurs pouvant influencer vos résultats.<br> Identifiez les sources potentielles d&#039;erreur et discutez de leur impact sur vos conclusions. Si nécessaire, envisagez de répéter l&#039;expérience avec des modifications pour vérifier la validité de vos résultats.Enfin, communiquez vos résultats de manière claire et transparente.<br> Rédigez un rapport détaillé de votre expérience, en incluant toutes les étapes de votre méthodologie, vos données brutes et vos analyses. Soyez honnête sur les incertitudes et les limitations de votre étude, et discutez des implications de vos résultats pour la compréhension scientifique globale.En suivant ces étapes, vous serez en mesure de mener des expériences SVT efficaces et de contribuer de manière significative à la recherche scientifique dans ce domaine.<br></div>
+        <br><br>
+        <div class="supp-text-main" style="text-align: center;">Votre avis compte</div>
+        <div class="advice-rating-container">
+            <div class="advice-rating">
+                <span data-value="5">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="1">&#9733;</span>
+            </div>
+        </div>
+        <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
+            <img src="../../../Images/bulle.png" height="30" style="margin-top: 14px; margin-right: 4px;">
+            <h3>CONSEIL DISCUSSION</h3>
+        </div>
+        </br>
+        <div class="supp-text-main">Laisser un commentaire</div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stars = document.querySelectorAll('.advice-rating span');
+
+            stars.forEach(function(star) {
+                star.addEventListener('click', function() {
+                    var rating = this.getAttribute('data-value')
+                    var conseilId = document.body.getAttribute('data-conseil-id');
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '../../gestion-note.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            console.log(xhr.responseText);
+                        }
+                    };
+                    xhr.send('&conseilId=' + conseilId + '&rating=' + rating);
+                });
+            });
+        });
+        </script>
+    </main>
+    </body>
+    <footer>
+        <iframe src="../../section.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../../footer.html" width="100%" height="100%" frameborder="0"></iframe>
+    </footer>
+    </html>

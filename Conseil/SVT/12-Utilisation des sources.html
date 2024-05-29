@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conseillos Brothers - Utilisation des sources</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body data-conseil-id="12">
+    <main>
+        <iframe src="../../nav.php" width="100%" height="127px" frameborder="0"></iframe>
+        <br><br>
+        <span><a href="page/1.php" class="categorie-link-main" style="font-size: 22px;">SVT</a></span>
+        <span style="color: white; font-size: 22px">-</span>
+        <span><a href="12-Utilisation des sources.html" class="categorie-link-main" style="margin-left: 0%;font-size: 22px;">Utilisation des sources</a></span>
+        <br><br><br>
+        <div class="supp-text-main">Classe recommandée : Toutes</div>
+        <br>
+        <div class="supp-text-main">
+            De <a href="../../account.html?id=1" class="profile-name">César Jules</a> le 28 May 2024
+        </div>
+        <br><br><br>
+        <div class="text-main">Lorsque vous utilisez des sources en sciences de la vie et de la Terre (SVT), il est essentiel de vous assurer qu&#039;elles sont crédibles et pertinentes pour votre étude. Voici quelques conseils pour évaluer et sélectionner vos sources avec soin :Tout d&#039;abord, vérifiez la crédibilité de la source. Assurez-vous qu&#039;elle est publiée par des experts reconnus dans le domaine et qu&#039;elle est affiliée à des institutions de recherche ou des revues scientifiques réputées.<br> Méfiez-vous des sources non vérifiées ou auto-publiées qui pourraient manquer de rigueur scientifique.Ensuite, évaluez la pertinence de la source par rapport à votre sujet d&#039;étude. Assurez-vous qu&#039;elle aborde spécifiquement les aspects de la SVT que vous explorez et qu&#039;elle fournit des informations utiles pour répondre à vos questions de recherche.<br>Considérez également la date de publication de la source. Les découvertes scientifiques évoluent rapidement, il est donc préférable de privilégier les sources récentes qui reflètent les connaissances les plus à jour sur votre sujet.Enfin, croisez les informations provenant de différentes sources pour obtenir une image plus complète et équilibrée de votre sujet.<br> Comparez les points de vue et les conclusions des différentes sources et soyez attentif aux éventuelles divergences ou controverses dans les résultats.En suivant ces conseils, vous serez en mesure d&#039;utiliser des sources fiables et pertinentes pour appuyer votre travail en SVT, ce qui renforcera la qualité et la crédibilité de vos recherches.</div>
+        <br><br>
+        <div class="supp-text-main" style="text-align: center;">Votre avis compte</div>
+        <div class="advice-rating-container">
+            <div class="advice-rating">
+                <span data-value="5">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="1">&#9733;</span>
+            </div>
+        </div>
+        <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
+            <img src="../../../Images/bulle.png" height="30" style="margin-top: 14px; margin-right: 4px;">
+            <h3>CONSEIL DISCUSSION</h3>
+        </div>
+        </br>
+        <div class="supp-text-main">Laisser un commentaire</div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stars = document.querySelectorAll('.advice-rating span');
+
+            stars.forEach(function(star) {
+                star.addEventListener('click', function() {
+                    var rating = this.getAttribute('data-value')
+                    var conseilId = document.body.getAttribute('data-conseil-id');
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '../../gestion-note.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            console.log(xhr.responseText);
+                        }
+                    };
+                    xhr.send('&conseilId=' + conseilId + '&rating=' + rating);
+                });
+            });
+        });
+        </script>
+    </main>
+    </body>
+    <footer>
+        <iframe src="../../section.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../../footer.html" width="100%" height="100%" frameborder="0"></iframe>
+    </footer>
+    </html>

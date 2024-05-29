@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conseillos Brothers - Démarche et Investigation</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body data-conseil-id="11">
+    <main>
+        <iframe src="../../nav.php" width="100%" height="127px" frameborder="0"></iframe>
+        <br><br>
+        <span><a href="page/1.php" class="categorie-link-main" style="font-size: 22px;">SVT</a></span>
+        <span style="color: white; font-size: 22px">-</span>
+        <span><a href="11-Démarche et Investigation.html" class="categorie-link-main" style="margin-left: 0%;font-size: 22px;">Démarche et Investigation</a></span>
+        <br><br><br>
+        <div class="supp-text-main">Classe recommandée : Toutes</div>
+        <br>
+        <div class="supp-text-main">
+            De <a href="../../account.html?id=1" class="profile-name">César Jules</a> le 28 May 2024
+        </div>
+        <br><br><br>
+        <div class="text-main">Lorsque vous menez une démarche d&#039;investigation en sciences de la vie et de la Terre (SVT), il est crucial de comprendre et de contrôler les variables impliquées dans votre étude. Voici quelques conseils pour vous aider à le faire efficacement :Tout d&#039;abord, identifiez les variables indépendantes, dépendantes et contrôlées dans votre expérience. La variable indépendante est celle que vous manipulez délibérément, la variable dépendante est celle que vous mesurez en réponse à la variable indépendante, et les variables contrôlées sont celles que vous maintenez constantes pour éviter qu&#039;elles n&#039;affectent vos résultats.<br>Ensuite, assurez-vous de contrôler attentivement les variables contrôlées pour minimiser les interférences avec votre variable indépendante. Cela peut nécessiter une planification minutieuse et l&#039;utilisation de conditions expérimentales spécifiques pour garantir que seules les variables que vous souhaitez étudier affectent vos résultats.Pendant l&#039;expérience, prenez des mesures précises et consignez toutes les données pertinentes.<br> Veillez à ce que vos méthodes de mesure soient fiables et reproductibles, et utilisez des outils appropriés pour minimiser les erreurs de mesure.Après avoir recueilli vos données, analysez-les soigneusement pour rechercher des tendances ou des relations significatives. Utilisez des techniques statistiques appropriées pour évaluer la signification de vos résultats et tirer des conclusions valides.<br>Enfin, réfléchissez à la manière dont les variables que vous avez identifiées pourraient affecter vos résultats et discutez de leurs implications pour votre étude. Identifiez les limites de votre démarche d&#039;investigation et suggérez des pistes pour des recherches futures qui pourraient approfondir notre compréhension du sujet.En suivant ces étapes, vous serez en mesure de mener une démarche d&#039;investigation SVT rigoureuse et de produire des résultats scientifiquement valables.<br></div>
+        <br><br>
+        <div class="supp-text-main" style="text-align: center;">Votre avis compte</div>
+        <div class="advice-rating-container">
+            <div class="advice-rating">
+                <span data-value="5">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="1">&#9733;</span>
+            </div>
+        </div>
+        <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
+            <img src="../../../Images/bulle.png" height="30" style="margin-top: 14px; margin-right: 4px;">
+            <h3>CONSEIL DISCUSSION</h3>
+        </div>
+        </br>
+        <div class="supp-text-main">Laisser un commentaire</div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stars = document.querySelectorAll('.advice-rating span');
+
+            stars.forEach(function(star) {
+                star.addEventListener('click', function() {
+                    var rating = this.getAttribute('data-value')
+                    var conseilId = document.body.getAttribute('data-conseil-id');
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '../../gestion-note.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            console.log(xhr.responseText);
+                        }
+                    };
+                    xhr.send('&conseilId=' + conseilId + '&rating=' + rating);
+                });
+            });
+        });
+        </script>
+    </main>
+    </body>
+    <footer>
+        <iframe src="../../section.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../../footer.html" width="100%" height="100%" frameborder="0"></iframe>
+    </footer>
+    </html>

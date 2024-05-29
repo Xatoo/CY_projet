@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conseillos Brothers - Lois de Newton</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body data-conseil-id="21">
+    <main>
+        <iframe src="../../nav.php" width="100%" height="127px" frameborder="0"></iframe>
+        <br><br>
+        <span><a href="page/1.php" class="categorie-link-main" style="font-size: 22px;">Physique</a></span>
+        <span style="color: white; font-size: 22px">-</span>
+        <span><a href="21-Lois de Newton.html" class="categorie-link-main" style="margin-left: 0%;font-size: 22px;">Lois de Newton</a></span>
+        <br><br><br>
+        <div class="supp-text-main">Classe recommandée : 4ème</div>
+        <br>
+        <div class="supp-text-main">
+            De <a href="../../account.html?id=2" class="profile-name">Le-Grand Alexandre</a> le 29 May 2024
+        </div>
+        <br><br><br>
+        <div class="text-main">Pour bien comprendre les lois de Newton en physique, il est essentiel de se familiariser avec leurs principes de base et leurs applications. Les lois de Newton sont fondamentales pour expliquer le mouvement des objets.La première loi de Newton, ou loi de l&#039;inertie, stipule qu&#039;un objet reste au repos ou en mouvement rectiligne uniforme sauf si une force extérieure agit sur lui.<br> Pour illustrer cela, imaginez une balle posée sur le sol : elle ne bougera pas tant que vous ne la poussez pas. De même, une balle en mouvement continuera à rouler tant qu&#039;aucune force (comme la friction) ne la ralentit.La deuxième loi de Newton relie la force, la masse et l&#039;accélération dans la formule F = m * a (force égale masse multipliée par l&#039;accélération).<br> Pour bien comprendre cette loi, essayez de pousser des objets de différentes masses et observez comment l&#039;accélération change en fonction de la force appliquée. Par exemple, une petite balle accélérera plus facilement qu&#039;une lourde boîte avec la même force.La troisième loi de Newton, ou loi de l&#039;action-réaction, affirme que pour chaque action, il existe une réaction égale et opposée.<br> Un bon exemple est le mouvement d&#039;une fusée : les gaz expulsés vers l&#039;arrière poussent la fusée vers l&#039;avant. Vous pouvez également expérimenter en poussant un mur : vous sentez une force égale qui vous repousse.Enfin, appliquez ces lois à des situations pratiques.<br> Par exemple, réfléchissez à comment les lois de Newton expliquent le fonctionnement des voitures, des avions, et même des sports que vous pratiquez. Essayez de résoudre des problèmes simples en utilisant ces lois pour renforcer votre compréhension.</div>
+        <br><br>
+        <div class="supp-text-main" style="text-align: center;">Votre avis compte</div>
+        <div class="advice-rating-container">
+            <div class="advice-rating">
+                <span data-value="5">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="1">&#9733;</span>
+            </div>
+        </div>
+        <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
+            <img src="../../../Images/bulle.png" height="30" style="margin-top: 14px; margin-right: 4px;">
+            <h3>CONSEIL DISCUSSION</h3>
+        </div>
+        </br>
+        <div class="supp-text-main">Laisser un commentaire</div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stars = document.querySelectorAll('.advice-rating span');
+
+            stars.forEach(function(star) {
+                star.addEventListener('click', function() {
+                    var rating = this.getAttribute('data-value')
+                    var conseilId = document.body.getAttribute('data-conseil-id');
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '../../gestion-note.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            console.log(xhr.responseText);
+                        }
+                    };
+                    xhr.send('&conseilId=' + conseilId + '&rating=' + rating);
+                });
+            });
+        });
+        </script>
+    </main>
+    </body>
+    <footer>
+        <iframe src="../../section.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../../footer.html" width="100%" height="100%" frameborder="0"></iframe>
+    </footer>
+    </html>

@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conseillos Brothers - Lecture régulière</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body data-conseil-id="15">
+    <main>
+        <iframe src="../../nav.php" width="100%" height="127px" frameborder="0"></iframe>
+        <br><br>
+        <span><a href="page/1.php" class="categorie-link-main" style="font-size: 22px;">Français</a></span>
+        <span style="color: white; font-size: 22px">-</span>
+        <span><a href="15-Lecture régulière.html" class="categorie-link-main" style="margin-left: 0%;font-size: 22px;">Lecture régulière</a></span>
+        <br><br><br>
+        <div class="supp-text-main">Classe recommandée : Seconde</div>
+        <br>
+        <div class="supp-text-main">
+            De <a href="../../account.html?id=1" class="profile-name">César Jules</a> le 29 May 2024
+        </div>
+        <br><br><br>
+        <div class="text-main">Pour améliorer vos compétences en français, la lecture régulière et la pratique de l&#039;écriture sont essentielles. Commencez par lire tous les jours, même si ce ne sont que quelques pages d&#039;un livre, d&#039;une bande dessinée ou d&#039;un article intéressant. Choisissez des livres adaptés à votre niveau et à vos centres d&#039;intérêt.<br> En lisant, prenez le temps de comprendre le sens des mots et des phrases. Si vous rencontrez un mot que vous ne connaissez pas, essayez de deviner sa signification en fonction du contexte ou cherchez-le dans un dictionnaire.En parallèle, pratiquez régulièrement l&#039;écriture.<br> Vous pouvez commencer par écrire quelques phrases chaque jour dans un journal personnel. Essayez d&#039;exprimer vos pensées, vos expériences ou même de créer des histoires. L&#039;important est de pratiquer l&#039;écriture de manière régulière et de vous familiariser avec la structure des phrases, l&#039;orthographe et la grammaire.<br> N&#039;ayez pas peur de faire des erreurs, c&#039;est en corrigeant vos erreurs que vous apprendrez et progresserez.En résumé, pour améliorer vos compétences en français, faites de la lecture et de l&#039;écriture des habitudes quotidiennes. Plus vous lirez et écrirez, plus vous développerez votre vocabulaire, votre compréhension de la langue et vos compétences en expression écrite.<br> Alors, prenez chaque occasion comme une opportunité d&#039;apprendre et de vous améliorer ! </div>
+        <br><br>
+        <div class="supp-text-main" style="text-align: center;">Votre avis compte</div>
+        <div class="advice-rating-container">
+            <div class="advice-rating">
+                <span data-value="5">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="1">&#9733;</span>
+            </div>
+        </div>
+        <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
+            <img src="../../../Images/bulle.png" height="30" style="margin-top: 14px; margin-right: 4px;">
+            <h3>CONSEIL DISCUSSION</h3>
+        </div>
+        </br>
+        <div class="supp-text-main">Laisser un commentaire</div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stars = document.querySelectorAll('.advice-rating span');
+
+            stars.forEach(function(star) {
+                star.addEventListener('click', function() {
+                    var rating = this.getAttribute('data-value')
+                    var conseilId = document.body.getAttribute('data-conseil-id');
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '../../gestion-note.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            console.log(xhr.responseText);
+                        }
+                    };
+                    xhr.send('&conseilId=' + conseilId + '&rating=' + rating);
+                });
+            });
+        });
+        </script>
+    </main>
+    </body>
+    <footer>
+        <iframe src="../../section.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../../footer.html" width="100%" height="100%" frameborder="0"></iframe>
+    </footer>
+    </html>

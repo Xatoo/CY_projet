@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conseillos Brothers - Problème complexe</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body data-conseil-id="1">
+    <main>
+        <iframe src="../../nav.php" width="100%" height="127px" frameborder="0"></iframe>
+        <br><br>
+        <span><a href="page/1.php" class="categorie-link-main" style="font-size: 22px;">Mathématique</a></span>
+        <span style="color: white; font-size: 22px">-</span>
+        <span><a href="1-Problème complexe.html" class="categorie-link-main" style="margin-left: 0%;font-size: 22px;">Problème complexe</a></span>
+        <br><br><br>
+        <div class="supp-text-main">Classe recommandée : 3ème</div>
+        <br>
+        <div class="supp-text-main">
+            De <a href="../../account.html?id=1" class="profile-name">César Jules</a> le 15 Mar 2024
+        </div>
+        <br><br><br>
+        <div class="text-main">Lorsqu&#039;on est confronté à un problème complexe, en le décomposant en étapes plus simples, vous pouvez rendre la tâche beaucoup plus gérable et plus facile à aborder. La première étape consiste à bien comprendre le problème. Prenez le temps de lire attentivement l&#039;énoncé, identifiez les données fournies et ce qui est demandé.<br> Si nécessaire, reformulez le problème avec vos propres mots pour vous assurer que vous avez bien saisi tous les éléments.Ensuite, divisez le problème en sous-problèmes plus petits. Par exemple, si vous devez résoudre une équation complexe, commencez par isoler les différentes parties de l&#039;équation.<br> Cherchez d&#039;abord à simplifier chaque terme ou à regrouper les termes similaires. Si vous devez écrire un texte, commencez par définir les idées principales avant de les détailler. L&#039;objectif est de transformer un grand problème en une série de petites tâches plus faciles à accomplir.<br>Une fois que vous avez des sous-problèmes clairs, abordez-les un par un. Concentrez-vous sur chaque étape sans vous laisser distraire par l&#039;ensemble du problème. Résolvez chaque sous-problème comme s&#039;il s&#039;agissait d&#039;un exercice indépendant.<br> Cette approche vous permet de progresser de manière régulière et de ne pas être submergé par la complexité globale du problème. De plus, chaque sous-problème résolu vous donnera un sentiment de réussite qui vous encouragera à continuer.Enfin, après avoir résolu tous les sous-problèmes, rassemblez les solutions pour obtenir la solution finale.<br> Vérifiez que chaque étape a été effectuée correctement et que la solution finale répond bien à la question posée. En résumé, décomposer un problème complexe en étapes simples permet de le rendre plus abordable et de renforcer votre confiance en vos capacités à le résoudre. Cette méthode est applicable non seulement en mathématiques, mais dans toutes les matières et même dans la vie quotidienne.<br> Avec de la pratique, vous verrez que cette technique deviendra une habitude précieuse pour surmonter toutes sortes de défis.</div>
+        <br><br>
+        <div class="supp-text-main" style="text-align: center;">Votre avis compte</div>
+        <div class="advice-rating-container">
+            <div class="advice-rating">
+                <span data-value="5">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="1">&#9733;</span>
+            </div>
+        </div>
+        <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
+            <img src="../../../Images/bulle.png" height="30" style="margin-top: 14px; margin-right: 4px;">
+            <h3>CONSEIL DISCUSSION</h3>
+        </div>
+        </br>
+        <div class="supp-text-main">Laisser un commentaire</div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stars = document.querySelectorAll('.advice-rating span');
+
+            stars.forEach(function(star) {
+                star.addEventListener('click', function() {
+                    var rating = this.getAttribute('data-value')
+                    var conseilId = document.body.getAttribute('data-conseil-id');
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '../../gestion-note.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            console.log(xhr.responseText);
+                        }
+                    };
+                    xhr.send('&conseilId=' + conseilId + '&rating=' + rating);
+                });
+            });
+        });
+        </script>
+    </main>
+    </body>
+    <footer>
+        <iframe src="../../section.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../../footer.html" width="100%" height="100%" frameborder="0"></iframe>
+    </footer>
+    </html>

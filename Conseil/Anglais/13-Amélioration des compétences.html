@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conseillos Brothers - Amélioration des compétences</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body data-conseil-id="13">
+    <main>
+        <iframe src="../../nav.php" width="100%" height="127px" frameborder="0"></iframe>
+        <br><br>
+        <span><a href="page/1.php" class="categorie-link-main" style="font-size: 22px;">Anglais</a></span>
+        <span style="color: white; font-size: 22px">-</span>
+        <span><a href="13-Amélioration des compétences.html" class="categorie-link-main" style="margin-left: 0%;font-size: 22px;">Amélioration des compétences</a></span>
+        <br><br><br>
+        <div class="supp-text-main">Classe recommandée : Toutes</div>
+        <br>
+        <div class="supp-text-main">
+            De <a href="../../account.html?id=1" class="profile-name">César Jules</a> le 28 May 2024
+        </div>
+        <br><br><br>
+        <div class="text-main">Pour améliorer vos compétences en anglais, il est essentiel de pratiquer régulièrement la lecture et l&#039;écoute active. Voici quelques conseils pour vous aider à développer ces compétences de manière efficace :Commencez par lire régulièrement des textes en anglais. Choisissez des sujets qui vous intéressent et qui sont adaptés à votre niveau de compétence.<br> Commencez par des textes courts et simples, puis progressez vers des matériaux plus complexes au fur et à mesure que votre maîtrise de la langue s&#039;améliore. Prenez le temps de comprendre le vocabulaire et la grammaire utilisés dans les textes et essayez de deviner le sens des mots que vous ne connaissez pas.Utilisez également l&#039;écoute active pour améliorer votre compréhension orale de l&#039;anglais.<br> Écoutez des podcasts, des émissions de radio, des vidéos ou des films en anglais et essayez de saisir le sens global du contenu. Répétez les phrases après les locuteurs pour travailler votre prononciation et votre intonation, et utilisez des sous-titres si nécessaire pour vous aider à suivre.Associez la lecture et l&#039;écoute en choisissant des textes écrits qui sont également disponibles en format audio.<br> Lisez le texte tout en écoutant la version audio pour renforcer votre compréhension et votre mémorisation du contenu.Practicez régulièrement la lecture à voix haute pour améliorer votre fluidité et votre prononciation en anglais. Choisissez des passages de texte qui vous plaisent et lisez-les à haute voix, en essayant de reproduire l&#039;intonation et le rythme naturels de la langue.<br>Enfin, n&#039;ayez pas peur de faire des erreurs et de vous corriger. L&#039;apprentissage d&#039;une langue est un processus continu, et il est normal de commettre des erreurs en cours de route. Utilisez vos erreurs comme des opportunités d&#039;apprentissage et continuez à pratiquer et à vous améliorer chaque jour.<br></div>
+        <br><br>
+        <div class="supp-text-main" style="text-align: center;">Votre avis compte</div>
+        <div class="advice-rating-container">
+            <div class="advice-rating">
+                <span data-value="5">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="1">&#9733;</span>
+            </div>
+        </div>
+        <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
+            <img src="../../../Images/bulle.png" height="30" style="margin-top: 14px; margin-right: 4px;">
+            <h3>CONSEIL DISCUSSION</h3>
+        </div>
+        </br>
+        <div class="supp-text-main">Laisser un commentaire</div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stars = document.querySelectorAll('.advice-rating span');
+
+            stars.forEach(function(star) {
+                star.addEventListener('click', function() {
+                    var rating = this.getAttribute('data-value')
+                    var conseilId = document.body.getAttribute('data-conseil-id');
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '../../gestion-note.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            console.log(xhr.responseText);
+                        }
+                    };
+                    xhr.send('&conseilId=' + conseilId + '&rating=' + rating);
+                });
+            });
+        });
+        </script>
+    </main>
+    </body>
+    <footer>
+        <iframe src="../../section.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../../footer.html" width="100%" height="100%" frameborder="0"></iframe>
+    </footer>
+    </html>

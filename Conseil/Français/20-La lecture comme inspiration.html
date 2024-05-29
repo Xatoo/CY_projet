@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conseillos Brothers - La lecture comme inspiration</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body data-conseil-id="20">
+    <main>
+        <iframe src="../../nav.php" width="100%" height="127px" frameborder="0"></iframe>
+        <br><br>
+        <span><a href="page/1.php" class="categorie-link-main" style="font-size: 22px;">Français</a></span>
+        <span style="color: white; font-size: 22px">-</span>
+        <span><a href="20-La lecture comme inspiration.html" class="categorie-link-main" style="margin-left: 0%;font-size: 22px;">La lecture comme inspiration</a></span>
+        <br><br><br>
+        <div class="supp-text-main">Classe recommandée : Terminale</div>
+        <br>
+        <div class="supp-text-main">
+            De <a href="../../account.html?id=1" class="profile-name">César Jules</a> le 29 May 2024
+        </div>
+        <br><br><br>
+        <div class="text-main">Pour développer votre créativité et votre expression écrite en français, utilisez la lecture comme source d&#039;inspiration. Lorsque vous lisez des livres, des poèmes ou des histoires, prenez note des techniques d&#039;écriture, des styles narratifs et des thèmes abordés par les auteurs. Analysez ce qui vous attire dans ces textes et réfléchissez à la manière dont vous pourriez les appliquer dans vos propres écrits.<br> En vous inspirant de vos lectures, pratiquez l&#039;écriture créative en explorant différents genres littéraires tels que le conte, la science-fiction, le fantastique, ou encore le récit historique. Laissez libre cours à votre imagination et écrivez des histoires originales en utilisant les éléments que vous avez trouvés intéressants dans vos lectures. N&#039;ayez pas peur d&#039;expérimenter avec les mots, les personnages et les situations pour créer des récits captivants.<br> En parallèle de l&#039;écriture créative, participez à des ateliers d&#039;écriture ou rejoignez un club de lecture où vous pourrez partager vos écrits avec d&#039;autres passionnés de littérature. Recevoir des retours et des conseils constructifs de vos pairs vous aidera à améliorer vos compétences d&#039;écriture et à développer votre style personnel. Profitez également de ces occasions pour lire vos propres textes à voix haute et découvrir comment ils résonnent avec un public.<br> En résumé, pour améliorer vos compétences en français, utilisez la lecture comme source d&#039;inspiration pour l&#039;écriture créative. Analysez les techniques d&#039;écriture des auteurs, explorez différents genres littéraires, et pratiquez l&#039;écriture de manière régulière en partageant vos textes avec d&#039;autres passionnés de littérature. En développant votre créativité et votre expression écrite, vous deviendrez un écrivain plus confiant et compétent.<br></div>
+        <br><br>
+        <div class="supp-text-main" style="text-align: center;">Votre avis compte</div>
+        <div class="advice-rating-container">
+            <div class="advice-rating">
+                <span data-value="5">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="1">&#9733;</span>
+            </div>
+        </div>
+        <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
+            <img src="../../../Images/bulle.png" height="30" style="margin-top: 14px; margin-right: 4px;">
+            <h3>CONSEIL DISCUSSION</h3>
+        </div>
+        </br>
+        <div class="supp-text-main">Laisser un commentaire</div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stars = document.querySelectorAll('.advice-rating span');
+
+            stars.forEach(function(star) {
+                star.addEventListener('click', function() {
+                    var rating = this.getAttribute('data-value')
+                    var conseilId = document.body.getAttribute('data-conseil-id');
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '../../gestion-note.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            console.log(xhr.responseText);
+                        }
+                    };
+                    xhr.send('&conseilId=' + conseilId + '&rating=' + rating);
+                });
+            });
+        });
+        </script>
+    </main>
+    </body>
+    <footer>
+        <iframe src="../../section.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../../footer.html" width="100%" height="100%" frameborder="0"></iframe>
+    </footer>
+    </html>
