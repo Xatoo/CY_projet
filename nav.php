@@ -122,9 +122,9 @@ session_start();
         <?php endif; ?>
     </div>
     <div class="bottom-nav">
-        <span><a href="Conseil/Seciales/Réussir son bac.html" class="button-box-bottom-nav" target="_parent">REUSSIR SON BAC</a></span>
-        <span><a href="Conseil/Seciales/Réussir son brevet.html" class="button-box-bottom-nav" target="_parent">REUSSIR SON BREVET</a></span>
-        <span><a href="Conseil/Seciales/Apprendre a travailler a la maison.html" class="button-box-bottom-nav" target="_parent">APPRENDRE A TRAVAILLER A LA MAISON</a></span>
+        <span><a href="Conseil/Speciales/Réussir son bac.html" class="button-box-bottom-nav" target="_parent">REUSSIR SON BAC</a></span>
+        <span><a href="Conseil/Speciales/Réussir son brevet.html" class="button-box-bottom-nav" target="_parent">REUSSIR SON BREVET</a></span>
+        <span><a href="Conseil/Speciales/Apprendre a travailler a la maison.html" class="button-box-bottom-nav" target="_parent">APPRENDRE A TRAVAILLER A LA MAISON</a></span>
     </div>
 
     <div class="bottom-right-nav">
