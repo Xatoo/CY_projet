@@ -264,7 +264,7 @@ $html_conseils_philosophie = generateHTMLConseils($conseils, "Philosophie", $uti
     <div class="line" style="width: 5%; padding: 1px;"></div>
     </br></br></br></br></br>
     <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
-        <img src="Images/bulle.png" height="30" style="margin-top: 14px; margin-right: 4px;">
+        <img src="Images/bulle.png" alt="Bulle de décoration" height="30" style="margin-top: 14px; margin-right: 4px;">
         <h3>RETROUVEZ LES MEILLEURS CONSEILS DE LA COMMUNAUTE</h3>
     </div>
 
