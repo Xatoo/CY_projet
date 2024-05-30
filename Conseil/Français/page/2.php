@@ -18,8 +18,8 @@ session_start();
     <main>
         </br>
         </br>
-        <div class="text-with-image" alt="Bulle de décoration" style="justify-content: left; padding-left: 25%;">
-            <img src="../../../Images/bulle.png" height="30" style="margin-top: 14px; margin-right: 4px;">
+        <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
+            <img src="../../../Images/bulle.png" alt="Bulle de décoration" height="30" style="margin-top: 14px; margin-right: 4px;">
             <h3>RETROUVEZ LES CONSEILS LES PLUS RECENT DE LA COMMUNAUTE EN FRANCAIS</h3>
         </div>
         </br>
