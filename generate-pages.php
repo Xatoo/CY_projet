@@ -107,7 +107,7 @@ function generateHtml($row, $utilisateurs) {
             </div>
         </div>
         <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
-            <img src="../../../Images/bulle.png" height="30" style="margin-top: 14px; margin-right: 4px;">
+            <img src="../../../Images/bulle.png" alt="Bulle de discussion" height="30" style="margin-top: 14px; margin-right: 4px;">
             <h3>CONSEIL DISCUSSION</h3>
         </div>
         </br>
