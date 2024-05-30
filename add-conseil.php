@@ -52,5 +52,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-include 'generate_pages.php';
+include 'generate-pages.php';
 ?>
