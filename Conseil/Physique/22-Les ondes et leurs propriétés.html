@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ÉduConseils - Les ondes et leurs propriétés</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body data-conseil-id="22">
+    <main>
+        <iframe src="../../nav.php" width="100%" height="127px" frameborder="0"></iframe>
+        <br><br>
+        <span><a href="page/1.php" class="categorie-link-main" style="font-size: 22px;">Physique</a></span>
+        <span style="color: white; font-size: 22px">-</span>
+        <span><a href="22-Les ondes et leurs propriétés.html" class="categorie-link-main" style="margin-left: 0%;font-size: 22px;">Les ondes et leurs propriétés</a></span>
+        <br><br><br>
+        <div class="supp-text-main">Classe recommandée : 2nde</div>
+        <br>
+        <div class="supp-text-main">
+            De <a href="../../account.html?id=2" class="profile-name">Le-Grand Alexandre</a> le 29 May 2024
+        </div>
+        <br><br><br>
+        <div class="text-main">Pour bien comprendre les ondes et leurs propriétés en physique, il est essentiel de se familiariser avec les concepts de base et leurs applications. Les ondes sont des perturbations qui se propagent dans un milieu, transportant de l&#039;énergie sans transporter de matière.Commence par différencier les types d&#039;ondes : les ondes mécaniques, qui nécessitent un milieu pour se propager (comme les vagues sur l&#039;eau ou les ondes sonores), et les ondes électromagnétiques, qui peuvent se propager dans le vide (comme la lumière ou les ondes radio).<br> Visualiser ces concepts à travers des expériences simples peut être très utile.La première étape est de comprendre les caractéristiques des ondes, comme la longueur d&#039;onde, la fréquence, et l&#039;amplitude. Par exemple, dessinez une onde sinusoïdale et identifiez ces différentes parties.<br> Vous pouvez aussi observer des ondes dans l&#039;eau en jetant une pierre dans un étang et en notant comment les vagues se forment et se propagent.Ensuite, explorez les comportements des ondes, comme la réflexion, la réfraction, et la diffraction. Utilisez des expériences simples pour observer ces phénomènes.<br> Par exemple, dirigez un faisceau de lumière sur un miroir pour voir la réflexion, ou faites passer une onde sonore à travers différents matériaux pour observer la réfraction.Un aspect important à comprendre est l&#039;effet Doppler, qui explique pourquoi le son d&#039;une sirène semble changer de hauteur lorsqu&#039;elle passe près de vous. Vous pouvez expérimenter avec des sources sonores en mouvement pour mieux saisir ce concept.<br>Enfin, appliquez ces connaissances à des situations pratiques. Réfléchissez à comment les ondes sont utilisées dans la vie quotidienne, comme dans les télécommunications, les micro-ondes, et les dispositifs médicaux. Essayez de résoudre des problèmes simples en utilisant les propriétés des ondes pour renforcer votre compréhension.<br>En résumé, pour maîtriser les concepts des ondes, il est important de comprendre chaque type d&#039;onde et leurs propriétés, d&#039;observer et d&#039;expérimenter leurs comportements, et de les appliquer à des situations réelles. Cette méthode vous aidera à développer une solide base en physique et à mieux comprendre le monde qui vous entoure.</div>
+        <br><br>
+        <div class="supp-text-main" style="text-align: center;">Votre avis compte</div>
+        <div class="advice-rating-container">
+            <div class="advice-rating">
+                <span data-value="5">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="1">&#9733;</span>
+            </div>
+        </div>
+        <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
+            <img src="../../../Images/bulle.png" alt="Bulle de discussion" height="30" style="margin-top: 14px; margin-right: 4px;">
+            <h3>CONSEIL DISCUSSION</h3>
+        </div>
+        </br>
+        <div class="supp-text-main">Laisser un commentaire</div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stars = document.querySelectorAll('.advice-rating span');
+
+            stars.forEach(function(star) {
+                star.addEventListener('click', function() {
+                    var rating = this.getAttribute('data-value')
+                    var conseilId = document.body.getAttribute('data-conseil-id');
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '../../gestion-note.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            console.log(xhr.responseText);
+                        }
+                    };
+                    xhr.send('&conseilId=' + conseilId + '&rating=' + rating);
+                });
+            });
+        });
+        </script>
+    </main>
+    </body>
+    <footer>
+        <iframe src="../../section.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../../footer.html" width="100%" height="100%" frameborder="0"></iframe>
+    </footer>
+    </html>

@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ÉduConseils - Pratiquer la lecture active</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body data-conseil-id="18">
+    <main>
+        <iframe src="../../nav.php" width="100%" height="127px" frameborder="0"></iframe>
+        <br><br>
+        <span><a href="page/1.php" class="categorie-link-main" style="font-size: 22px;">Français</a></span>
+        <span style="color: white; font-size: 22px">-</span>
+        <span><a href="18-Pratiquer la lecture active.html" class="categorie-link-main" style="margin-left: 0%;font-size: 22px;">Pratiquer la lecture active</a></span>
+        <br><br><br>
+        <div class="supp-text-main">Classe recommandée : Seconde</div>
+        <br>
+        <div class="supp-text-main">
+            De <a href="../../account.html?id=1" class="profile-name">César Jules</a> le 29 May 2024
+        </div>
+        <br><br><br>
+        <div class="text-main">Pour améliorer vos compétences en français, il est important de pratiquer la lecture active et l&#039;analyse de texte. La lecture active consiste à être attentif et engagé dans la lecture d&#039;un texte en posant des questions, en soulignant les informations importantes, et en faisant des liens avec vos connaissances et expériences personnelles. Avant de commencer à lire, identifiez l&#039;objectif de votre lecture et posez-vous des questions sur le texte, telles que : Quel est le sujet principal ? Quels sont les éléments clés de l&#039;argumentation ? Quelles émotions ou idées l&#039;auteur cherche-t-il à transmettre ? Ensuite, pratiquez l&#039;analyse de texte en examinant attentivement la structure, le style d&#039;écriture, le vocabulaire et les thèmes abordés.<br> Identifiez les éléments de rhétorique utilisés par l&#039;auteur pour convaincre ou persuader le lecteur, et analysez comment ces éléments contribuent à l&#039;efficacité du texte. Prenez des notes sur vos observations et discutez-en avec vos camarades de classe ou vos enseignants pour approfondir votre compréhension.En parallèle de la lecture active et de l&#039;analyse de texte, pratiquez également la rédaction d&#039;analyses et de commentaires sur des textes littéraires, des articles de presse ou des documents historiques.<br> Exercez-vous à structurer vos idées de manière claire et cohérente, à utiliser des exemples concrets pour étayer vos arguments, et à faire preuve de précision dans votre expression écrite. N&#039;hésitez pas à demander des retours sur vos écrits pour identifier vos points forts et vos axes d&#039;amélioration.En résumé, pour améliorer vos compétences en français, pratiquez la lecture active et l&#039;analyse de texte en posant des questions, en examinant attentivement la structure et le style d&#039;écriture, et en rédigeant des analyses claires et argumentées.<br> En développant ces compétences, vous deviendrez un lecteur plus critique et un rédacteur plus efficace.</div>
+        <br><br>
+        <div class="supp-text-main" style="text-align: center;">Votre avis compte</div>
+        <div class="advice-rating-container">
+            <div class="advice-rating">
+                <span data-value="5">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="1">&#9733;</span>
+            </div>
+        </div>
+        <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
+            <img src="../../../Images/bulle.png" alt="Bulle de discussion" height="30" style="margin-top: 14px; margin-right: 4px;">
+            <h3>CONSEIL DISCUSSION</h3>
+        </div>
+        </br>
+        <div class="supp-text-main">Laisser un commentaire</div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stars = document.querySelectorAll('.advice-rating span');
+
+            stars.forEach(function(star) {
+                star.addEventListener('click', function() {
+                    var rating = this.getAttribute('data-value')
+                    var conseilId = document.body.getAttribute('data-conseil-id');
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '../../gestion-note.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            console.log(xhr.responseText);
+                        }
+                    };
+                    xhr.send('&conseilId=' + conseilId + '&rating=' + rating);
+                });
+            });
+        });
+        </script>
+    </main>
+    </body>
+    <footer>
+        <iframe src="../../section.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../../footer.html" width="100%" height="100%" frameborder="0"></iframe>
+    </footer>
+    </html>

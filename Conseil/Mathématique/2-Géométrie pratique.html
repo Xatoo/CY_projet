@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ÉduConseils - Géométrie pratique</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body data-conseil-id="2">
+    <main>
+        <iframe src="../../nav.php" width="100%" height="127px" frameborder="0"></iframe>
+        <br><br>
+        <span><a href="page/1.php" class="categorie-link-main" style="font-size: 22px;">Mathématique</a></span>
+        <span style="color: white; font-size: 22px">-</span>
+        <span><a href="2-Géométrie pratique.html" class="categorie-link-main" style="margin-left: 0%;font-size: 22px;">Géométrie pratique</a></span>
+        <br><br><br>
+        <div class="supp-text-main">Classe recommandée : 2nde</div>
+        <br>
+        <div class="supp-text-main">
+            De <a href="../../account.html?id=1" class="profile-name">César Jules</a> le 27 May 2024
+        </div>
+        <br><br><br>
+        <div class="text-main">La géométrie peut sembler abstraite par moments, vous pouvez mieux comprendre les concepts et leurs applications pratiques. Lorsque vous étudiez des figures géométriques comme les triangles, les cercles ou les polygones, cherchez des exemples dans le monde qui vous entoure. Par exemple, observez comment les formes géométriques sont utilisées dans l&#039;architecture, le design ou la nature.<br> Cela vous aidera à visualiser les concepts et à les relier à des situations réelles.Aussi, n&#039;hésitez pas à expérimenter avec des objets physiques. Utilisez des matériaux simples comme des cordes, des crayons et du papier pour créer des représentations des figures géométriques que vous étudiez.<br> Manipulez ces objets pour explorer les propriétés et les relations entre les différentes parties. Par exemple, construisez différents types de triangles et mesurez leurs côtés et leurs angles pour découvrir les règles qui les gouvernent.Enfin, utilisez la géométrie pour résoudre des problèmes pratiques.<br> Par exemple, si vous voulez planifier un jardin, utilisez des concepts géométriques comme le calcul d&#039;aires pour déterminer la quantité de terre nécessaire ou la disposition optimale des parterres. En résumé, en utilisant des exemples concrets, en expérimentant avec des objets physiques et en appliquant les concepts à des problèmes réels, vous pouvez rendre la géométrie plus tangible et plus accessible.</div>
+        <br><br>
+        <div class="supp-text-main" style="text-align: center;">Votre avis compte</div>
+        <div class="advice-rating-container">
+            <div class="advice-rating">
+                <span data-value="5">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="1">&#9733;</span>
+            </div>
+        </div>
+        <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
+            <img src="../../../Images/bulle.png" alt="Bulle de discussion" height="30" style="margin-top: 14px; margin-right: 4px;">
+            <h3>CONSEIL DISCUSSION</h3>
+        </div>
+        </br>
+        <div class="supp-text-main">Laisser un commentaire</div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stars = document.querySelectorAll('.advice-rating span');
+
+            stars.forEach(function(star) {
+                star.addEventListener('click', function() {
+                    var rating = this.getAttribute('data-value')
+                    var conseilId = document.body.getAttribute('data-conseil-id');
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '../../gestion-note.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            console.log(xhr.responseText);
+                        }
+                    };
+                    xhr.send('&conseilId=' + conseilId + '&rating=' + rating);
+                });
+            });
+        });
+        </script>
+    </main>
+    </body>
+    <footer>
+        <iframe src="../../section.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../../footer.html" width="100%" height="100%" frameborder="0"></iframe>
+    </footer>
+    </html>

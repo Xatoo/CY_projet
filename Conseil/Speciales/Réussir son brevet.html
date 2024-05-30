@@ -1,0 +1,68 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ÉduConseils - Réussir son brevet</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body data-conseil-id="7">
+    <main>
+        <iframe src="../../../nav.php" width="100%" height="126px" frameborder="0"></iframe>
+        <br><br>
+        <span><a href="Réussir son brevet.html" class="categorie-link-main" style="font-size: 22px;">Réussir son brevet</a></span>
+        <br><br><br>
+        <div class="supp-text-main">Classe recommandée : 3ème</div>
+        <br>
+        <div class="supp-text-main">
+            De <a href="../../account.html?id=1" class="profile-name">Luc César</a> le 24 May 2024
+        </div>
+        <br><br><br>
+        <div class="text-main">Tout d'abord, il est crucial de structurer tes révisions de manière organisée. Commence par dresser une liste de toutes les matières que tu dois reviser, en accordant une attention particulière à celles où tu te sens moins à l'aise. Ensuite, élabore un planning réaliste en répartissant équitablement ton temps entre chaque sujet.<br>Lorsque tu révises, concentre-toi sur la compréhension des concepts plutôt que sur la mémorisation pure. Utilise des techniques variées telles que les schémas, les résumés et les exercices pratiques pour renforcer ta compréhension. La diversité des méthodes d'apprentissage stimulera ton cerveau et te permettra de mieux retenir l'information.<br>Ne néglige pas la pratique régulière avec des sujets d'examen antérieurs. Cela te familiarisera avec le format des questions et te permettra de gérer ton temps efficacement le jour de l'examen. N'oublie pas d'analyser tes erreurs pour identifier les domaines à améliorer.<br>En parallèle de tes révisions, veille à prendre soin de ton bien-être physique et mental. Accorde-toi des pauses régulières pour te reposer et te détendre. Veille à une alimentation saine et à un sommeil suffisant pour rester en forme pendant cette période intense.<br>Le jour de l'examen, garde ton calme et aborde chaque question avec confiance. Lis attentivement les consignes et planifie ta stratégie de réponse avant de commencer. Gère ton temps judicieusement en accordant plus d'attention aux questions qui rapportent le plus de points.<br>N'oublie pas que le brevet est une étape importante, mais ce n'est pas une mesure définitive de ton potentiel. Donne de ton mieux, mais n'oublie pas de prendre du recul et de te rappeler que ta valeur ne se limite pas à tes résultats scolaires. Si tu rencontres des difficultés, n'hésite pas à demander de l'aide à tes enseignants ou à tes proches.<br>Tu as le potentiel pour réussir le brevet, alors crois en toi-même et donne le meilleur de toi-même !</div>
+        <br><br>
+        <div class="supp-text-main" style="text-align: center;">Votre avis compte</div>
+        <div class="advice-rating-container">
+            <div class="advice-rating">
+                <span data-value="5">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="1">&#9733;</span>
+            </div>
+        </div>
+        <div class="text-with-image" style="justify-content: left; padding-left: 25%;">
+            <img src="../../../Images/bulle.png" height="30" style="margin-top: 14px; margin-right: 4px;">
+            <h3>CONSEIL DISCUSSION</h3>
+        </div>
+        </br>
+        <div class="supp-text-main">Laisser un commentaire</div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stars = document.querySelectorAll('.advice-rating span');
+
+            stars.forEach(function(star) {
+                star.addEventListener('click', function() {
+                    var rating = this.getAttribute('data-value')
+                    var conseilId = document.body.getAttribute('data-conseil-id');
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '../../gestion-note.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            console.log(xhr.responseText);
+                        }
+                    };
+                    xhr.send('&conseilId=' + conseilId + '&rating=' + rating);
+                });
+            });
+        });
+        </script>
+    </main>
+    </body>
+    <footer>
+        <iframe src="../../section.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../../footer.html" width="100%" height="100%" frameborder="0"></iframe>
+    </footer>
+    </html>
