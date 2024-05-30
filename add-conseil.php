@@ -4,6 +4,7 @@ session_start();
 if (!isset($_SESSION['id'])) {
     // L'utilisateur n'est pas connecté, vous pouvez gérer cela selon vos besoins
     echo 'Vous devez être connecté pour noter.';
+    echo '<meta http-equiv="refresh" content="1; url=index.html">';
     exit;
 }
 
