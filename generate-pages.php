@@ -77,7 +77,7 @@ function generateHtml($row, $utilisateurs) {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Conseillos Brothers - $title</title>
+        <title>ÉduConseils - $title</title>
         <link rel="stylesheet" href="../../style.css">
     </head>
     <body data-conseil-id="$id">
